@@ -223,6 +223,7 @@ button:active {
 
  .books {
     display: flex;
+    flex-wrap: wrap; /* divide books to row and wrap */
  }
 
  .book {
@@ -241,6 +242,9 @@ button:active {
     border-radius: 4px;
     overflow: hidden;
     display: flex;
+   
+ }
+
  }
 
  .book:hover .book__img {
@@ -267,4 +271,7 @@ button:active {
     padding-right: 6px;
     color: #bfbfbf;
  }
- }
+ 
+ /* LATEST */
+
+ .
