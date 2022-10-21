@@ -48,6 +48,7 @@ a:hover {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto; /* to center the items and space nicely */
     padding: 0 24px; /* space items from left and right of screen*/
 }
@@ -174,6 +175,7 @@ button:active {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none; /* only show in phone size*/
 }
 
 
@@ -188,6 +190,19 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden; /* instead of display:none it cant be styled anything*/
+    opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open { /*when open menu, no overflow shown */
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 .menu__links {
@@ -367,7 +382,17 @@ button:active {
   }
 
   .footer__link {
-    padding: 0 5px;
+    padding: 0 8px;
+  }
+
+  @media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+  }
+
+  .btn__menu {
+    display: block; /* only show in phone size */
   }
   
  
