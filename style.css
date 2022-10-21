@@ -260,13 +260,13 @@ button:active {
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight {
     padding: 0 24px; /* space between highlights*/
     width: calc(100% / 3);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -292,6 +292,7 @@ button:active {
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /* FEATURES */
@@ -385,6 +386,31 @@ button:active {
     padding: 0 8px;
   }
 
+
+  /* tablets */
+  @media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+  }
+
+  /* small phones, large smartphones*/
   @media (max-width: 550px) {
     .nav__links {
         display: none;
@@ -394,5 +420,14 @@ button:active {
   .btn__menu {
     display: block; /* only show in phone size */
   }
+
+  .highlight {
+    width: 100%; /* highlight vertical align one by one pair with flex-wrap:wrap at wrapper parent*/
+    margin-bottom: 24px;
+}
+
+.highlight:not(:last-child) {
+    margin-bottom: 24px;
+}
   
  
