@@ -351,6 +351,12 @@ button:active {
     padding-right: 6px;
     color: #bfbfbf;
  }
+
+
+
+ .books__header--title {
+    margin-bottom: 0;
+ }
  
  /* Explore */
 
